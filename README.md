@@ -1,21 +1,14 @@
 # MqttTlsMve
 
-**TODO: Add description**
+MVE for testing Tortoise against an MQTT broker.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mqtt_tls_mve` to your list of dependencies in `mix.exs`:
+### 1. If elixir is not installed
 
-```elixir
-def deps do
-  [
-    {:mqtt_tls_mve, "~> 0.1.0"}
-  ]
-end
+You can build the Docker container, then run it.
+
+```sh
+docker build . -t mqtt_tls_mve:latest
+MQTTdocker mqtt_tls_mve
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/mqtt_tls_mve>.
-
