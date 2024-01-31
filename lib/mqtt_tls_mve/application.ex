@@ -25,6 +25,9 @@ defmodule MqttTlsMve.Application do
            host: System.get_env("MQTT_HOST"),
            port: System.get_env("MQTT_PORT", "8883") |> String.to_integer(),
            cacertfile: "isrgrootx1.pem",
+           customize_hostname_check: [
+             match_fun: :public_key.pkix_verify_hostname_match_fun(:https)
+           ],
            verify: :verify_peer
          },
          handler: {MqttTlsMve.TortoiseHandler, []},
